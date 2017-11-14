@@ -18,6 +18,7 @@
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Menu</a></li>
 			</ul>
+			<button class="btn-success">Register</button>
 		</div>
 	</div>
 </div>
