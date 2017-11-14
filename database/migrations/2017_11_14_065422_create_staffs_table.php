@@ -18,14 +18,15 @@ class CreateStaffsTable extends Migration
             $table->string('stfFirstName', 100);
             $table->string('stfLastName', 100);
             $table->string('stfPosition', 150);
+            $table->integer('stfManager')->unsigned()->nullable(true);
             $table->string('stfAddress', 250);
             $table->string('stfTel', 15);
+            $table->integer('branchId')->unsigned();
             $table->timestamps();
-        });
 
-        // Schema::table('branchs', function (Blueprint $table) {
-        //     $table->foreign('branchId')->references('branchId')->on('branchs');
-        // });
+            $table->foreign('branchId')->references('branchId')->on('branchs');
+            $table->foreign('stfManager')->references('stfId')->on('staffs');
+        });
     }
 
     /**
