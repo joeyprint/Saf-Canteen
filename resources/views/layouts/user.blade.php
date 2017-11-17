@@ -8,6 +8,7 @@
 		{{--  Stylesheet  --}}
 		<link rel="stylesheet" href="/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/css/app.css">
+		<link rel="stylesheet" href="/css/utilStyle/navbar.css"
 
 		@yield('custom_head')
 	</head>

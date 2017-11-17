@@ -8,6 +8,7 @@
 		</div>
 		<div class="navbar-header pull-right visible-xs">
 			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#menuNavigator" aria-expanded="false">
+				<span class="sr-only"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -17,8 +18,9 @@
 			<ul class="nav navbar-nav">
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Menu</a></li>
+				<li><a href="#">About</a></li>
 			</ul>
-			<button class="btn-success">Register</button>
+			<button class="btn btn-success btn-register">Register</button>
 		</div>
 	</div>
 </div>
