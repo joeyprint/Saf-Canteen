@@ -16,12 +16,15 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('orderId');
             $table->integer('custId')->unsigned();
-            $table->integer('branchId')->unsigned();
-            $table->string('orderStatus');
+            $table->string('orderSendAddress');
+            $table->integer('stfId')->unsigned();
+            $table->integer('paymentId')->unsigned();
+            $table->double('orderTotal');
             $table->timestamps();
 
-            $table->foreign('branchId')->references('branchId')->on('branchs');
             $table->foreign('custId')->references('custId')->on('customers');
+            $table->foreign('stfId')->references('stfId')->on('staffs');
+            $table->foreign('paymentId')->references('paymentId')->on('payments');
         });
     }
 

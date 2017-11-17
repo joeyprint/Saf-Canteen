@@ -14,17 +14,17 @@ class CreateStaffsTable extends Migration
     public function up()
     {
         Schema::create('staffs', function (Blueprint $table) {
-            $table->increments('stfId');
-            $table->string('stfFirstName', 100);
-            $table->string('stfLastName', 100);
-            $table->string('stfPosition', 150);
-            $table->integer('stfManager')->unsigned()->nullable(true);
-            $table->string('stfAddress', 250);
-            $table->string('stfTel', 15);
-            $table->integer('branchId')->unsigned();
+            $table->increments('stfid');
+            $table->string('username');
+            $table->string('password');
+            $table->string('stfFirstName');
+            $table->string('stfLastName');
+            $table->string('stfPosition');
+            $table->integer('stfManager')->unsigned();
+            $table->string('stfAddress');
+            $table->string('stfTel');
             $table->timestamps();
 
-            $table->foreign('branchId')->references('branchId')->on('branchs');
             $table->foreign('stfManager')->references('stfId')->on('staffs');
         });
     }

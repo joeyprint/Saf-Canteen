@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBranchsTable extends Migration
+class CreatePaymentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateBranchsTable extends Migration
      */
     public function up()
     {
-        Schema::create('branchs', function (Blueprint $table) {
-            $table->increments('branchId');
-            $table->string('branchAddress', 250);
+        Schema::create('payments', function (Blueprint $table) {
+            $table->increments('paymentId');
+            $table->string('paymentStatus');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateBranchsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('branchs');
+        Schema::dropIfExists('payments');
     }
 }
