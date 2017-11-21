@@ -13,14 +13,16 @@
 
 Route::prefix('/') -> group(function () {
     Route::get('/', 'CustomerController@index');
-    Route::get('/authen', 'LoginController@custLogin');
+    Route::prefix('/authen') -> group(function() {
+        Route::get('/', 'LoginController@custLogin');
+        Route::get('/register', 'RegisterController@custRegis');
+    });
 
     Route::prefix('/organ') -> group(function () {
         Route::get('/', 'ShopController@index');
-        Route::get('/authen', 'LoginController@organLogin');
-
-        Route::prefix('/register') -> group(function () {
-            // Route::get('/');
+        Route::prefix('/authen') -> group(function () {
+            Route::get('/', 'LoginController@organLogin');
+            Route::get('/register', 'RegisterController@organRegis');
         });
     });
 
