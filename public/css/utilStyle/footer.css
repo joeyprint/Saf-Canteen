@@ -3,7 +3,7 @@
   background-color: #351918;
   font-family: 'Prompt', sans-serif;
   color: #fff !important;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;

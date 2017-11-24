@@ -12,7 +12,7 @@ class MenuController extends Controller
                 ->select('menuName')
                 ->where('categoryId', '=', 1)
                 ->get();
-        dd($burgerMenu);
+        // dd($burgerMenu);
         return view('userPages.burgerMenu');
     }
 
@@ -21,7 +21,7 @@ class MenuController extends Controller
                 ->select('menuName')
                 ->where('categoryId', '=', 2)
                 ->get();
-        dd($chickenMenu);
+        // dd($chickenMenu);
         return view('userPages.chickenMenu');
     }
 
@@ -30,7 +30,7 @@ class MenuController extends Controller
                 ->select('menuName')
                 ->where('categoryId', '=', 3)
                 ->get();
-        dd($snackMenu);
+        // dd($snackMenu);
         return view('userPages.snackMenu');
     }
 
@@ -39,7 +39,7 @@ class MenuController extends Controller
                 ->select('menuName')
                 ->where('categoryId', '=', 4)
                 ->get();
-        dd($dessertMenu);
+        // dd($dessertMenu);
         return view('userPages.dessertMenu');
     }
 }
