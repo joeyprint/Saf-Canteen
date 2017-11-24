@@ -4,6 +4,26 @@
     color: #fff !important;
 }
 
+.logo-img {
+    width: 100%;
+}
+
+.toggle-btn {
+    border-color: #fff;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.toggle-btn:hover {
+    border-color: #fff;
+    background-color: #DFA001 !important;
+}
+
+.toggle {
+    background-color: #fff !important;
+}
+
 .menu-button {
     display: block;
     margin: 0px 3em 0px 3em;
@@ -11,14 +31,28 @@
 }
 
 .menu-link {
-    color: #fff;
+    color: #fff !important;
 }
 
 .menu-link:hover {
-    color: #DFA001;
+    color: #DFA001 !important;
     background-color: transparent !important;
 }
 
-.btn-register {
-    margin-top: 7px;
+.authen-group {
+    text-align: right;
+    margin-top: 15px;
 }
+
+.authen-btn {
+    color: #DFA001;
+    cursor: pointer;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+    .logo-img {
+        width: 100%;
+    }
+}   
