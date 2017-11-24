@@ -1,0 +1,22 @@
+.user-footer {
+  background-color: #351918;
+  font-family: 'Prompt', sans-serif;
+  color: #fff !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.privacy-text {
+  color: #fff;
+}
+
+.privacy-text:hover {
+  color: #DFA001;
+  background: transparent !important;
+}
+
+.text-right {
+  text-align: right;
+}

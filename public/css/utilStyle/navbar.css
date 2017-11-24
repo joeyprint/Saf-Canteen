@@ -1,3 +1,24 @@
+.user-navbar {
+    background-color: #351918;
+    font-family: 'Prompt', sans-serif;
+    color: #fff !important;
+}
+
+.menu-button {
+    display: block;
+    margin: 0px 3em 0px 3em;
+    font-size: 1.5em;
+}
+
+.menu-link {
+    color: #fff;
+}
+
+.menu-link:hover {
+    color: #DFA001;
+    background-color: transparent !important;
+}
+
 .btn-register {
     margin-top: 7px;
 }
