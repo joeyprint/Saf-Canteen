@@ -1,26 +1,53 @@
-<div class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top user-navbar">
 	<div class="container">
-		<div class="navbar-header pull-left">
-			<a class="navbar-brand">
-				<img src="#" alt="">
-				<span>Saf CANTEEN</span>
-			</a>
+		<div class="row">
+			<div class="col-xs-5 col-sm-3 col-md-2">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">
+						<img src="/img/LOGO.png" class="logo-img" alt="SaF CANTEEN">
+					</a>
+				</div>
+				<button type="button" class="navbar-toggle collapsed toggle-btn" data-toggle="collapse" data-target="#menuNav" aria-expanded="false">
+					<span class="sr-only">MenuNavi</span>
+					<span class="icon-bar toggle"></span>
+					<span class="icon-bar toggle"></span>
+					<span class="icon-bar toggle"></span>
+				</button>
+			</div>
+			<div class="col-sm-offset-5 col-sm-4 col-md-offset-7 col-md-3 hidden-xs authen-group">
+				<p>
+					<a class="menu-link">
+						<span class="authen-btn">เข้าสู่ระบบ</span>
+					</a> หรือ
+					<a class="menu-link">
+						<span class="authen-btn">สมัครสมาชิก</span>
+					</a>
+				</p>
+			</div>
 		</div>
-		<div class="navbar-header pull-right visible-xs">
-			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#menuNavigator" aria-expanded="false">
-				<span class="sr-only"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-		</div>
-		<div class="navbar-header pull-right hidden-xs" id="menuNavigator">
+		<div class="collapse navbar-collapse" id="menuNav">
 			<ul class="nav navbar-nav">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Menu</a></li>
-				<li><a href="#">About</a></li>
+				<li class="menu-button">
+					<a class="menu-link" href="/burger">เบอร์เกอร์</a>
+				</li>
+				<li class="menu-button">
+					<a class="menu-link" href="/chicken">ไก่ทอด</a>
+				</li>
+				<li class="menu-button">
+					<a class="menu-link" href="/snack">เฟรนช์ฟรายส์</a>
+				</li>
+				<li class="menu-button">
+					<a class="menu-link" href="/dessert">ของหวาน</a>
+				</li>
 			</ul>
-			<button class="btn btn-success btn-register">Register</button>
+			<p class="visible-xs">
+				<a class="menu-link">
+					<span class="authen-btn">เข้าสู่ระบบ</span>
+				</a> หรือ
+				<a class="menu-link">
+					<span class="authen-btn">สมัครสมาชิก</span>
+				</a>
+			</p>
 		</div>
 	</div>
-</div>
+</nav>
