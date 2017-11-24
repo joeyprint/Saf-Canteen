@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    public function showBurgerMenu() {
+    public function showBurgerMenu () {
         $burgerMenu = DB::table('menus')
                 ->select('menuName')
                 ->where('categoryId', '=', 1)
@@ -16,23 +16,30 @@ class MenuController extends Controller
         return view('userPages.burgerMenu');
     }
 
-    public function showChickAndSnackMenu() {
+    public function showChickenMenu () {
         $chickenMenu = DB::table('menus')
                 ->select('menuName')
                 ->where('categoryId', '=', 2)
                 ->get();
+        dd($chickenMenu);
+        return view('userPages.chickenMenu');
+    }
+
+    public function showSnackMenu () {
         $snackMenu = DB::table('menus')
                 ->select('menuName')
                 ->where('categoryId', '=', 3)
                 ->get();
-        return view('userPages.chickAndSnackMenu');
+        dd($snackMenu);
+        return view('userPages.snackMenu');
     }
 
-    public function showDessertMenu() {
+    public function showDessertMenu () {
         $dessertMenu = DB::table('menus')
                 ->select('menuName')
                 ->where('categoryId', '=', 4)
                 ->get();
+        dd($dessertMenu);
         return view('userPages.dessertMenu');
     }
 }

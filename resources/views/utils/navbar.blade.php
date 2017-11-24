@@ -28,16 +28,16 @@
 		<div class="collapse navbar-collapse" id="menuNav">
 			<ul class="nav navbar-nav">
 				<li class="menu-button">
-					<a class="menu-link" href="#">เบอร์เกอร์</a>
+					<a class="menu-link" href="/burger">เบอร์เกอร์</a>
 				</li>
 				<li class="menu-button">
-					<a class="menu-link" href="#">ไก่ทอด</a>
+					<a class="menu-link" href="/chicken">ไก่ทอด</a>
 				</li>
 				<li class="menu-button">
-					<a class="menu-link" href="#">เฟรนช์ฟรายส์</a>
+					<a class="menu-link" href="/snack">เฟรนช์ฟรายส์</a>
 				</li>
 				<li class="menu-button">
-					<a class="menu-link" href="#">ของหวาน</a>
+					<a class="menu-link" href="/dessert">ของหวาน</a>
 				</li>
 			</ul>
 			<p class="visible-xs">
