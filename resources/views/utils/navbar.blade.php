@@ -56,19 +56,27 @@
 				</li>
 			</ul>
 			@if (!Session::has('userId', 'userFirstname'))
-				<p class="visible-xs">
+			<ul class="nav navbar-nav">
+				<li class="visible-xs menu-button">
 					<a class="menu-link" href="/authen">
 						<span class="authen-btn">เข้าสู่ระบบ</span>
-					</a> หรือ
+					</a>
+				</li>
+				<li class="visible-xs menu-button">
 					<a class="menu-link" href="/authen/register">
 						<span class="authen-btn">สมัครสมาชิก</span>
 					</a>
-				</p>
+				</li>
+			</ul>
 			@else
-				<form class="visible-xs" action='/' method='post'>
+				<form action='/' method='post'>
 					{{ csrf_field() }}
 					<input type='hidden' name='custId' value='{{ Session::get("userId") }}' >
-					<p cl>{{ Session::get('userFirstname') }}</p>
+					<span>{{ Session::get('userFirstname') }} | </span>
+					<a class="menu-link" href="/status">
+						<span>ตรวจสอบสถานะ</span>
+					</a>	
+					<span> | </span>
 					<a class="menu-link" href="/logout">
 						<span class="authen-btn">Logout</span>
 					</a>
