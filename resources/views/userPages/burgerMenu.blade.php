@@ -1,11 +1,13 @@
 @extends('layouts.user')
 
 @section('title')
-  Burger
+	Berger
 @endsection
 
 @section('custom_head')
-  <link rel="stylesheet" href="/css/userStyle/menu.css">
+	<link rel="stylesheet" href="/css/userStyle/menu.css">
+	
+
 @endsection
 
 @section('content')
