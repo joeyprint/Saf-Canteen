@@ -28,7 +28,11 @@
 					<form action='/' method='post'>
 						{{ csrf_field() }}
 						<input type='hidden' name='custId' value='{{ Session::get("userId") }}' >
-						<button type='submit' class='btn btn-link'>{{ Session::get('userFirstname') }}</button>
+						<span>{{ Session::get('userFirstname') }} | </span>
+						<a class="menu-link" href="/status">
+							<span>ตรวจสอบสถานะ</span>
+						</a>
+						<span> | </span>
 						<a class="menu-link" href="/logout">
 							<span class="authen-btn">Logout</span>
 						</a>
@@ -64,7 +68,7 @@
 				<form class="visible-xs" action='/' method='post'>
 					{{ csrf_field() }}
 					<input type='hidden' name='custId' value='{{ Session::get("userId") }}' >
-					<button type='submit' class='btn btn-link'>{{ Session::get('userFirstname') }}</button>
+					<p cl>{{ Session::get('userFirstname') }}</p>
 					<a class="menu-link" href="/logout">
 						<span class="authen-btn">Logout</span>
 					</a>

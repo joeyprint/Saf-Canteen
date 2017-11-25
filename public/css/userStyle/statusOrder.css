@@ -1,0 +1,19 @@
+body {
+  margin-top: 130px;
+  font-family: 'Prompt', sans-serif;
+}
+
+.order-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.order-title {
+  font-size: 18pt;
+}
+
+.order-status {
+  font-size: 16pt;
+}
