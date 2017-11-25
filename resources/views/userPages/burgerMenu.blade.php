@@ -15,7 +15,7 @@
 		<div class="row">
 			@foreach($burgerMenu as $menu)
 				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-					<div class="jumbotron">
+					<div class="jumbotron menu-box">
 						<div class="row">
 							<div class="col-xs-12">
 								<img class="image-menu" src="/img/burgerMenu/{{ $menu->menuPic }}" alt="">

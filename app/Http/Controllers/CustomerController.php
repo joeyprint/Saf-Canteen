@@ -20,8 +20,19 @@ class CustomerController extends Controller
                 ['customers.custId', '=', $request->custId]
             ])
             ->get();
-
         return view('userPages.statusOrder');
+    }
+
+    public function selectOrder () {
+        $order = DB::table('orders')
+            ->join('orderDetails', 'orders.orderiId', '=', 'orderDetails.orderId')
+            ->join('menus', 'orderDetails.menuId', '=', 'menus.menuId')
+            ->select('menuName', 'menuPrice', 'quanty', 'orderTotal')
+            ->where([
+                ['orders.custId', '=', $request->custId]
+            ])
+            ->get();
+        return view('userPages.stockInOrder');
     }
     
     

@@ -15,7 +15,7 @@
 				</button>
 			</div>
 			<div class="col-sm-offset-5 col-sm-4 col-md-offset-7 col-md-3 hidden-xs authen-group">
-				@if (!isset($user))
+				@if (!Session::has('userId', 'userFirstname'))
 				<p>
 					<a class="menu-link" href="/authen">
 						<span class="authen-btn">เข้าสู่ระบบ</span>
@@ -25,12 +25,18 @@
 					</a>
 				</p>
 				@else
-					<form action='/status' method='post'>
+					<form action='/' method='post'>
 						{{ csrf_field() }}
-						<input type='hidden' name='custId' value='{{ $user->custId }}' >
-						<button type='submit' class='btn btn-link'>{{ $user->custFirstName }}</button>
+						<input type='hidden' name='custId' value='{{ Session::get("userId") }}' >
+						<span>{{ Session::get('userFirstname') }} | </span>
+						<a class="menu-link" href="/status">
+							<span>ตรวจสอบสถานะ</span>
+						</a>
+						<span> | </span>
+						<a class="menu-link" href="/logout">
+							<span class="authen-btn">Logout</span>
+						</a>
 					</form>
-					<a>Logout</a>
 				@endif
 			</div>
 		</div>
@@ -49,14 +55,25 @@
 					<a class="menu-link" href="/dessert">ของหวาน</a>
 				</li>
 			</ul>
-			<p class="visible-xs">
-				<a class="menu-link" href="/authen">
-					<span class="authen-btn">เข้าสู่ระบบ</span>
-				</a> หรือ
-				<a class="menu-link" href="/authen/register">
-					<span class="authen-btn">สมัครสมาชิก</span>
-				</a>
-			</p>
+			@if (!Session::has('userId', 'userFirstname'))
+				<p class="visible-xs">
+					<a class="menu-link" href="/authen">
+						<span class="authen-btn">เข้าสู่ระบบ</span>
+					</a> หรือ
+					<a class="menu-link" href="/authen/register">
+						<span class="authen-btn">สมัครสมาชิก</span>
+					</a>
+				</p>
+			@else
+				<form class="visible-xs" action='/' method='post'>
+					{{ csrf_field() }}
+					<input type='hidden' name='custId' value='{{ Session::get("userId") }}' >
+					<p cl>{{ Session::get('userFirstname') }}</p>
+					<a class="menu-link" href="/logout">
+						<span class="authen-btn">Logout</span>
+					</a>
+				</form>
+			@endif
 		</div>
 	</div>
 </nav>
