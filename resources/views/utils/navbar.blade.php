@@ -15,6 +15,7 @@
 				</button>
 			</div>
 			<div class="col-sm-offset-5 col-sm-4 col-md-offset-7 col-md-3 hidden-xs authen-group">
+				@if (!isset($user))
 				<p>
 					<a class="menu-link" href="/authen">
 						<span class="authen-btn">เข้าสู่ระบบ</span>
@@ -23,6 +24,14 @@
 						<span class="authen-btn">สมัครสมาชิก</span>
 					</a>
 				</p>
+				@else
+					<form action='/status' method='post'>
+						{{ csrf_field() }}
+						<input type='hidden' name='custId' value='{{ $user->custId }}' >
+						<button type='submit' class='btn btn-link'>{{ $user->custFirstName }}</button>
+					</form>
+					<a>Logout</a>
+				@endif
 			</div>
 		</div>
 		<div class="collapse navbar-collapse" id="menuNav">

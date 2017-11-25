@@ -19,8 +19,11 @@ Route::prefix('/') -> group(function () {
     Route::get('/dessert', 'MenuController@showDessertMenu');
     Route::prefix('/authen') -> group(function() {
         Route::get('/', 'LoginController@custLogin');
+        Route::post('/', 'LoginController@custSubmitLogin');
         Route::get('/register', 'RegisterController@custRegis');
     });
+
+    Route::post('/status', 'CustomerController@statusOrder');
 
     Route::prefix('/organ') -> group(function () {
         Route::get('/', 'ShopController@index');
