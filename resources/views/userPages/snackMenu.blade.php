@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
 @section('title')
-	Burger Menu
+	Snack
 @endsection
 
 @section('custom_head')

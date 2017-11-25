@@ -14,7 +14,7 @@ class MenuController extends Controller
                 ->get();
         // dd($burgerMenu);
         return view('userPages.burgerMenu');
-    }
+    }   
 
     public function showChickenMenu () {
         $chickenMenu = DB::table('menus')
