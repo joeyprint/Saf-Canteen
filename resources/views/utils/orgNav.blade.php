@@ -8,6 +8,18 @@
 					</a>
 				</div>
 			</div>
+			@if (Session::has('userId', 'userFirstname'))
+			<div class="pull-right nav-header">
+				<form action='/organ' method='post'>
+					{{ csrf_field() }}
+					<input type='hidden' name='custId' value='{{ Session::get("userId") }}'>
+					<button type='submit' class='btn btn-link'>{{ Session::get('userFirstname') }}</button>
+					<a class="menu-link" href="/organ/logout">
+						<span class="authen-btn">Logout</span>
+					</a>
+				</form>
+			</div>
+			@endif
 		</diV>
 	</div>
 </nav>

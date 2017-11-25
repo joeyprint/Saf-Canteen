@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Session;
+use Barryvdh\Debugbar\Facade as Debugbar;
+
 class LoginController extends Controller
 {
     protected $userId;
@@ -22,6 +25,8 @@ class LoginController extends Controller
                 ['password', '=', $pass]
             ])
             ->get();
+        $request->session()->put('userId', $userLogin[0]->custId);
+        $request->session()->put('userFirstname', $userLogin[0]->custFirstName);
         return view('userPages.index', ['user' => $userLogin[0]]);
     }
 
@@ -30,21 +35,27 @@ class LoginController extends Controller
     }
 
     public function organSubmitLogin(Request $request){
-        $email = $request->email;
-        $pass = $request->password;
+        $email = $request->stfemail;
+        $pass = $request->stfpassword;
         $organLogin = DB::table('staffs')
-            ->select('stfId')
-            ->where(['email','=', $email], ['password', '=', $pass])
+            ->where([
+                ['email', '=', $email],
+                ['password', '=', $pass]
+            ])
             ->get();
-        $orgId = $organLogin;
-        return redirect('/organ');
+            Debugbar::info($organLogin[0]);
+        $request->session()->put('userId', $organLogin[0]->stfId);
+        $request->session()->put('userFirstname', $organLogin[0]->stfFirstName);
+        return view('orgPages.index', ['user' => $organLogin[0]]);
     }
 
     public function custLogout(){
+        Session::flush();
         return redirect('/');
     }
 
     public function organLogout(){
+        Session::flush();        
         return redirect('/organ');
     }
 }

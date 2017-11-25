@@ -1,15 +1,13 @@
 @extends('layouts.org')
 
 @section('title')
-  Home
+  Authentication
 @endsection
 
 @section('custom_head')
-
+	<link rel="stylesheet" href="/css/orgStyle/index.css">
 @endsection
 
 @section('content')
-  <div>
   
-  </div>
 @endsection

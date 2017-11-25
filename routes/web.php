@@ -17,20 +17,21 @@ Route::prefix('/') -> group(function () {
     Route::get('/chicken', 'MenuController@showChickenMenu');
     Route::get('/snack', 'MenuController@showSnackMenu');
     Route::get('/dessert', 'MenuController@showDessertMenu');
+    Route::post('/status', 'CustomerController@statusOrder');
     Route::prefix('/authen') -> group(function() {
         Route::get('/', 'LoginController@custLogin');
         Route::post('/', 'LoginController@custSubmitLogin');
         Route::get('/register', 'RegisterController@custRegis');
     });
-
-    Route::post('/status', 'CustomerController@statusOrder');
+    Route::get('/logout', 'LoginController@custLogout');
 
     Route::prefix('/organ') -> group(function () {
-        Route::get('/', 'ShopController@indexOrg');
-        Route::prefix('/authen') -> group(function () {
-            Route::get('/', 'LoginController@organLogin');
-            Route::get('/register', 'RegisterController@organRegis');
+        Route::get('/', 'LoginController@organLogin');
+        Route::post('/', 'LoginController@organSubmitLogin');
+        Route::prefix('/index') -> group(function () {
+            Route::get('/', 'ShopController@index');
         });
+        Route::get('/logout', 'LoginController@organLogout');    
     });
 
 });
