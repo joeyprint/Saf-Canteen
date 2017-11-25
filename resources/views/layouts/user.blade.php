@@ -8,7 +8,6 @@
 		{{--  Stylesheet  --}}
 		<link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
 		<link rel="stylesheet" href="/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/css/font-awesome.min.css">
 		<link rel="stylesheet" href="/css/app.css">
 		<link rel="stylesheet" href="/css/utilStyle/navbar.css">
 		<link rel="stylesheet" href="/css/utilStyle/footer.css">
