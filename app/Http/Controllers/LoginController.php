@@ -27,7 +27,7 @@ class LoginController extends Controller
             ->get();
         $request->session()->put('userId', $userLogin[0]->custId);
         $request->session()->put('userFirstname', $userLogin[0]->custFirstName);
-        return view('userPages.index', ['user' => $userLogin[0]]);
+        return redirect('/');
     }
 
     public function organLogin(Request $request){
@@ -46,7 +46,7 @@ class LoginController extends Controller
             Debugbar::info($organLogin[0]);
         $request->session()->put('userId', $organLogin[0]->stfId);
         $request->session()->put('userFirstname', $organLogin[0]->stfFirstName);
-        return view('orgPages.index', ['user' => $organLogin[0]]);
+        return redirect('/organ/index');
     }
 
     public function custLogout(){

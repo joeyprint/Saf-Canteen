@@ -17,7 +17,7 @@ Route::prefix('/') -> group(function () {
     Route::get('/chicken', 'MenuController@showChickenMenu');
     Route::get('/snack', 'MenuController@showSnackMenu');
     Route::get('/dessert', 'MenuController@showDessertMenu');
-    Route::post('/status', 'CustomerController@statusOrder');
+    Route::get('/status', 'CustomerController@statusOrder');
     Route::prefix('/authen') -> group(function() {
         Route::get('/', 'LoginController@custLogin');
         Route::post('/', 'LoginController@custSubmitLogin');
