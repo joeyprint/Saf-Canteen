@@ -1,7 +1,7 @@
 @extends('layouts.user')
 
 @section('title')
-  Burger
+  Dessert
 @endsection
 
 @section('custom_head')
@@ -9,13 +9,13 @@
 @endsection
 
 @section('content')
-<div class="container">
+ <div class="container">
 <div class="row">
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
 				<div class="jumbotron">
 				    <div class="container">
-				           <h1>หัวข้อ</h1>
+				            <h1>หัวข้อ</h1>
                             <p>Contents ...</p>
                             <p>
 								<a class="btn btn-primary btn-lg">ใส่ตระกร้า</a>            
