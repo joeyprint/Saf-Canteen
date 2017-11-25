@@ -16,10 +16,10 @@
 			</div>
 			<div class="col-sm-offset-5 col-sm-4 col-md-offset-7 col-md-3 hidden-xs authen-group">
 				<p>
-					<a class="menu-link">
+					<a class="menu-link" href="/authen">
 						<span class="authen-btn">เข้าสู่ระบบ</span>
 					</a> หรือ
-					<a class="menu-link">
+					<a class="menu-link" href="/authen/register">
 						<span class="authen-btn">สมัครสมาชิก</span>
 					</a>
 				</p>
@@ -41,10 +41,10 @@
 				</li>
 			</ul>
 			<p class="visible-xs">
-				<a class="menu-link">
+				<a class="menu-link" href="/authen">
 					<span class="authen-btn">เข้าสู่ระบบ</span>
 				</a> หรือ
-				<a class="menu-link">
+				<a class="menu-link" href="/authen/register">
 					<span class="authen-btn">สมัครสมาชิก</span>
 				</a>
 			</p>
