@@ -1,0 +1,27 @@
+body {
+  margin-top: 130px;
+  font-family: 'Prompt', sans-serif;
+}
+
+.regis-block {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-indent: middle;
+  margin-top: 35px;
+  margin-bottom: 50px;
+}
+
+.regis-btn {
+  margin-top:10px;
+  color: #efefef;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #DFA001;
+}
+
+.regis-btn:hover {
+  color:#efefef;
+  background-color: #d19200;
+  cursor: pointer;
+}

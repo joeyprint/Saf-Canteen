@@ -16,12 +16,10 @@
 					<div class="col-xs-12 col-md-offset-2 col-md-8">
 						<form action="" method="post" autocomplete="off">
 							<div class="text-center">SaF CANTEEN</div>
-							<div class="inner-addon left-addon">
-								<i class="fa fa-user form-control-feedback"></i>
-								<input type="text" class="form-control" name="uid" placeholder="username" autofocus autocomplete="off">
+							<div class="inner-addon">
+								<input type="text" class="form-control" name="uemail" placeholder="example@email.com" autofocus autocomplete="off">
 							</div>
-							<div class="inner-addon left-addon">
-								<i class="fa fa-lock form-control-feedback"></i>
+							<div class="inner-addon">
 								<input type="password" class="form-control" name="password" placeholder="password" autocomplete="off">
 							</div>
 						</form>
