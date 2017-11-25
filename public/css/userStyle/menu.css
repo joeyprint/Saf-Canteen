@@ -12,3 +12,11 @@ body {
 .image-menu {
     width: 100%;
 }
+
+.menu-title {
+  font-size: 18pt;
+}
+
+.menu-text {
+  font-size: 10pt !important;
+}
