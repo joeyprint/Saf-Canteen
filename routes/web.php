@@ -26,7 +26,7 @@ Route::prefix('/') -> group(function () {
     Route::post('/status', 'CustomerController@statusOrder');
 
     Route::prefix('/organ') -> group(function () {
-        Route::get('/', 'ShopController@index');
+        Route::get('/', 'ShopController@indexOrg');
         Route::prefix('/authen') -> group(function () {
             Route::get('/', 'LoginController@organLogin');
             Route::get('/register', 'RegisterController@organRegis');
