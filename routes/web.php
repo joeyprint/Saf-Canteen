@@ -21,7 +21,7 @@ Route::prefix('/') -> group(function () {
     Route::prefix('/addOrder') ->group(function () {
         Route::get('/', 'CustomerController@selectOrder');
         Route::get('/sendAt', 'CustomerController@showSendAddress');
-        // Route::post('/submit', CustomerController)
+        Route::post('/sendAt', 'CustomerController@submitAddrSend');
     });
     Route::prefix('/authen') -> group(function() {
         Route::get('/', 'LoginController@custLogin');

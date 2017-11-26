@@ -5,7 +5,7 @@
 @endsection
 
 @section('custom_head')
-	<link rel="stylesheet" href="/css/userStyle/statusOrder.css">
+	<link rel="stylesheet" href="/css/userStyle/showAddrSend.css">
 @endsection
 
 @section('content')
@@ -15,31 +15,27 @@
         <h2>เลือกสถานที่จัดส่ง</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-6">
-        <div class="jumbotron order-card">
+      <div class="col-xs-12">
+        <div class="jumbotron add-addr-card">
           <div class="row">
             <div class="col-xs-12">
-              <strong><p class="order-title">สถานะการส่ง Order #123456</p></strong>
-            </div>
-            <div class="col-xs-12">
-              <p class="order-status">Unpaid</p>
+              <p class="add-addr-title">+ เพิ่มที่อยู่</p>
             </div>
           </div>
         </div>				
       </div>
-      <div class="col-xs-12 col-md-6">
-        <div class="jumbotron order-card">
-          <div class="row">
-            <div class="col-xs-12">
-              <strong><p class="order-title">สถานะการส่ง Order #123456</p></strong>
-            </div>
-            <div class="col-xs-12">
-              <p class="order-status">Unpaid</p>
-            </div>
+      @foreach($showAddr as $show)
+        <a href="/status">
+          <div class="col-xs-12">
+            <div class="jumbotron order-card">
+              <div class="row">
+                <div class="col-xs-12">
+                  <p class="order-title">{{ $show->orderSendAddress }}</p>
+                </div>
+              </div>
+            </div>				
           </div>
-        </div>				
-      </div>
-    </div>
+        </a>
+      @endforeach
   </div>
 @endsection

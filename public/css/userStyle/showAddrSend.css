@@ -1,0 +1,58 @@
+body {
+  margin-top: 130px;
+  font-family: 'Prompt', sans-serif;
+}
+
+.title-page {
+  margin-bottom: 20px;
+}
+
+.order-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.order-card:hover {
+  background-color: #DFA001;
+  color: #fff;
+  cursor: pointer;
+}
+
+.order-title {
+  font-size: 18pt;
+  margin-top: 15px;
+}
+
+.order-status {
+  font-size: 16pt;
+}
+
+.add-addr-card {
+  background-color: transparent ;
+  border: 2px solid #868686;
+  color: #868686;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.add-addr-card:hover {
+  border: 2px solid #DFA001;
+  color: #DFA001;
+  cursor: pointer;
+}
+
+.add-addr-title {
+  font-size: 18pt;
+  margin-top: 15px;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+  body {
+    margin-top: 70px;
+  }
+}
