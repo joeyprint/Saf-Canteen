@@ -69,7 +69,7 @@
 				</li>
 			</ul>
 			@else
-				<form action='/' method='post'>
+				<form class="visible-xs" action='/' method='post'>
 					{{ csrf_field() }}
 					<input type='hidden' name='custId' value='{{ Session::get("userId") }}' >
 					<span>{{ Session::get('userFirstname') }} | </span>
