@@ -53,6 +53,16 @@
           </div>				
         </div>
       @endforeach
+    </div>
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-4 col-md-offset-3 col-md-3">
+        <strong><p class="total-price">ราคาสุทธิ</p></strong>
+      </div>
+      <div class="col-xs-4 col-md-3 text-right">
+        <strong><p class="total-price">{{ $order->orderTotal }} บาท</p></strong>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-xs-6">
         <a href="/burger">
           <div class="jumbotron continue-btn">

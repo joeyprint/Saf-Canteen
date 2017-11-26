@@ -45,6 +45,10 @@ body {
   margin-top: 25px;
 }
 
+.total-price {
+  font-size: 20pt;
+}
+
 .continue-btn {
   background-color: transparent;
   border: 1px solid #DFA001;
@@ -82,5 +86,9 @@ and (max-device-width : 568px) {
     border: 1px solid #303030;
     border-radius: 10px;
     padding:5px;
+  }
+
+  .total-price {
+    font-size: 16pt;
   }
 }   
