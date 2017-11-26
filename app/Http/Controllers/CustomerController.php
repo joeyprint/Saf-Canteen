@@ -39,6 +39,7 @@ class CustomerController extends Controller
     public function showSendAddress (Request $request) {
         $show = DB::table('orders')
             ->join('customers', 'customers.custId', '=', 'orders.custId')
+            ->select('orderSendAddress')
             ->where([
                 ['customers.custId', '=', $request->session()->get('userId')]
             ])
@@ -46,5 +47,7 @@ class CustomerController extends Controller
         return view('userPages.selectAddrSend', ['showAddr' => $show]);
     }
 
-
+    public function submitAddrSend () {
+        return redirect('/status');
+    }
 }

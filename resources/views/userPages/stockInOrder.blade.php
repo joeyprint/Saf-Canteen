@@ -54,22 +54,26 @@
         </div>
       @endforeach
       <div class="col-xs-6">
-        <div class="jumbotron continue-btn">
-          <div class="row">
-            <div class="col-xs-12 text-center">
-              <strong><p class="text-btn-conti">เลือกสินค้าเพิ่ม</p></strong>
+        <a href="/burger">
+          <div class="jumbotron continue-btn">
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <strong><p class="text-btn-conti">เลือกสินค้าเพิ่ม</p></strong>
+              </div>
             </div>
           </div>
-        </div>				
+        </a>				
       </div>
       <div class="col-xs-6">
-        <div class="jumbotron continue-btn">
-          <div class="row">
-            <div class="col-xs-12 text-center">
-              <strong><p class="text-btn-conti">ดำเนินการต่อ</p></strong>
+        <a href="/addOrder/sendAt">
+          <div class="jumbotron continue-btn">
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <strong><p class="text-btn-conti">ดำเนินการต่อ</p></strong>
+              </div>
             </div>
-          </div>
-        </div>				
+          </div>				
+        </a>
       </div>
     </div>
   </div>

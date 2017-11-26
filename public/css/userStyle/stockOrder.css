@@ -48,7 +48,7 @@ body {
 .continue-btn {
   background-color: transparent;
   border: 1px solid #DFA001;
-  color: #DFA001;
+  color: #DFA001;  
   padding: 0px;
 }
 
@@ -58,7 +58,6 @@ body {
   color: #fff;
   cursor: pointer;
 }
-
 
 .text-btn-conti {
   font-size: 13pt !important;
