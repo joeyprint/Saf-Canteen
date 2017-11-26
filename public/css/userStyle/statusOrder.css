@@ -3,11 +3,21 @@ body {
   font-family: 'Prompt', sans-serif;
 }
 
+.title-page {
+  margin-bottom: 20px;
+}
+
 .order-card {
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
+}
+
+.order-card:hover {
+  background-color: #DFA001;
+  color: #fff;
+  cursor: pointer;
 }
 
 .order-title {
@@ -16,4 +26,24 @@ body {
 
 .order-status {
   font-size: 16pt;
+}
+
+.add-order-card {
+  background-color: transparent ;
+  border: 2px solid #868686;
+  color: #868686;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.add-order-card:hover {
+  border: 2px solid #DFA001;
+  color: #DFA001;
+  cursor: pointer;
+}
+
+.add-order-title {
+  font-size: 18pt;
+  padding-top: 20px;
 }

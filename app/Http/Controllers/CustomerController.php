@@ -17,10 +17,10 @@ class CustomerController extends Controller
             ->join('customers', 'customers.custId', '=', 'orders.custId')
             ->select('orderId', 'paymentStatus')
             ->where([
-                ['customers.custId', '=', $request->custId]
+                ['customers.custId', '=', $request->session()->get('userId')]
             ])
             ->get();
-        return view('userPages.statusOrder');
+        return view('userPages.statusOrder', ['status' => $status]);
     }
 
     public function selectOrder () {
@@ -35,5 +35,15 @@ class CustomerController extends Controller
         return view('userPages.stockInOrder');
     }
     
-    
+    public function showSendAddress (Request $request) {
+        $show = DB::table('orders')
+            ->join('customers', 'customers.custId', '=', 'orders.custId')
+            ->where([
+                ['customers.custId', '=', $request->custId]
+            ])
+            ->get();
+        return view('userPages.selectAddrSend');
+    }
+
+
 }
