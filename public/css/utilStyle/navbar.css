@@ -56,4 +56,9 @@ and (max-device-width : 568px) {
     .logo-img {
         width: 100%;
     }
+
+    .menu-button {
+        font-size: 12pt !important;
+        float: left;
+    }
 }   

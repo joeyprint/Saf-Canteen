@@ -25,3 +25,11 @@ body {
   background-color: #d19200;
   cursor: pointer;
 }
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+  body {
+    margin-top: 70px;
+  }
+}

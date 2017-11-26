@@ -14,7 +14,7 @@
 					<span class="icon-bar toggle"></span>
 				</button>
 			</div>
-			<div class="col-sm-offset-5 col-sm-4 col-md-offset-7 col-md-3 hidden-xs authen-group">
+			<div class="col-sm-offset-5 col-sm-4 col-md-offset-5 col-md-5 hidden-xs authen-group">
 				@if (!Session::has('userId', 'userFirstname'))
 				<p>
 					<a class="menu-link" href="/authen">
@@ -29,6 +29,10 @@
 						{{ csrf_field() }}
 						<input type='hidden' name='custId' value='{{ Session::get("userId") }}' >
 						<span>{{ Session::get('userFirstname') }} | </span>
+						<a class="menu-link" href="/addOrder">
+							<span>ตระกร้าสินค้า</span>
+						</a>
+						<span> | </span>
 						<a class="menu-link" href="/status">
 							<span>ตรวจสอบสถานะ</span>
 						</a>
@@ -56,19 +60,31 @@
 				</li>
 			</ul>
 			@if (!Session::has('userId', 'userFirstname'))
-				<p class="visible-xs">
+			<ul class="nav navbar-nav">
+				<li class="visible-xs menu-button">
 					<a class="menu-link" href="/authen">
 						<span class="authen-btn">เข้าสู่ระบบ</span>
-					</a> หรือ
+					</a>
+				</li>
+				<li class="visible-xs menu-button">
 					<a class="menu-link" href="/authen/register">
 						<span class="authen-btn">สมัครสมาชิก</span>
 					</a>
-				</p>
+				</li>
+			</ul>
 			@else
 				<form class="visible-xs" action='/' method='post'>
 					{{ csrf_field() }}
 					<input type='hidden' name='custId' value='{{ Session::get("userId") }}' >
-					<p cl>{{ Session::get('userFirstname') }}</p>
+					<span>{{ Session::get('userFirstname') }} | </span>
+					<a class="menu-link" href="/addOrder">
+						<span>ตระกร้าสินค้า</span>
+					</a>
+					<span> | </span>
+					<a class="menu-link" href="/status">
+						<span>ตรวจสอบสถานะ</span>
+					</a>	
+					<span> | </span>
 					<a class="menu-link" href="/logout">
 						<span class="authen-btn">Logout</span>
 					</a>
