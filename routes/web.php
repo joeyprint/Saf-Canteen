@@ -34,7 +34,7 @@ Route::prefix('/') -> group(function () {
         Route::get('/', 'LoginController@organLogin');
         Route::post('/', 'LoginController@organSubmitLogin');
         Route::prefix('/index') -> group(function () {
-            Route::get('/', 'ShopController@index');
+            Route::get('/', 'ShopController@orderList');
         });
         Route::get('/logout', 'LoginController@organLogout');    
     });

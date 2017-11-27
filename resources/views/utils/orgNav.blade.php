@@ -8,12 +8,12 @@
 					</a>
 				</div>
 			</div>
-			@if (Session::has('userId', 'userFirstname'))
+			@if (Session::has('stfId', 'stfFirstname'))
 			<div class="pull-right nav-header">
 				<form action='/organ' method='post'>
 					{{ csrf_field() }}
-					<input type='hidden' name='custId' value='{{ Session::get("userId") }}'>
-					<button type='submit' class='btn btn-link'>{{ Session::get('userFirstname') }}</button>
+					<input type='hidden' name='custId' value='{{ Session::get("stfId") }}'>
+					<span>{{ Session::get('stfFirstname') }} |</span>
 					<a class="menu-link" href="/organ/logout">
 						<span class="authen-btn">Logout</span>
 					</a>
