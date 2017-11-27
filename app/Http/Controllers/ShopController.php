@@ -7,9 +7,9 @@ use DB;
 
 class ShopController extends Controller
 {
-    public function index() {
-        return view('orgPages.index');
-    }
+    // public function index() {
+    //     return view('orgPages.index');
+    // }
 
     public function orderList(Request $request) {
         $order = DB::table('orders')

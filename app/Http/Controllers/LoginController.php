@@ -43,7 +43,6 @@ class LoginController extends Controller
                 ['password', '=', $pass]
             ])
             ->get();
-            Debugbar::info($organLogin[0]);
         $request->session()->put('stfId', $organLogin[0]->stfId);
         $request->session()->put('stfFirstname', $organLogin[0]->stfFirstName);
         return redirect('/organ/index');
